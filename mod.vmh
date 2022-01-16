@@ -1,0 +1,128 @@
+201E //LD R0, #30
+A21E //LDI R1, #30
+947F //NOT R2, R1: R2 stores negative that we add to R0 each iteration
+14A1 //ADD R2, R2, #1: add 1 since we flipped bits 
+1002 //ADD R0, R0, R2: keep subtracting R2 from R0
+0606 //Brpz #6: if our decremented value is positive or zero, we can still still continue to decrement, but must add 1 to answer that stores a / b 
+4803 //JSR #3
+301A //ST R0, 26
+B61A //STI R3, 26
+F000 //HALT
+1001 //ADD R0, R0, R1: when R0 is negative, we add R1 once to get it positive, where this positive value is the modulus  
+C1C0 //RET
+16E1 //ADD R3, R3, #1: R3 increments while modulus is positive, it essentially stores value c of two inputs a,b divided such that a / b = c
+4FF6 //JSR -10: we then unconditionally go back to decrease R0 again since it remains positive
+0000
+0000
+0000
+0000
+0000
+0000
+0000 // this program, given positive inputs A and B, finds A % B (modulus of A and B) and A / B. These are similar operations and so this program does the two operations
+0000 // together. The general method that this program follows is that it subtracts B from A as many times as it can until A becomes negative. Once A is negative, it then 
+0000 // increments A by B so that A is positive. This positive value of A is the modulus that we are looking for. As we subtract B from A, we also increment a value stored in R3
+0000 // by 1 if the value that we store in A is positive or zero. This value stored in R3 is the solution for dividing A by B by the time we have computed the modulus. We may then 
+0000 // terminate the program. 
+0000
+0000
+0000
+0000
+0000
+0000
+001D //29
+0021 //33
+0006 //6
+0000 //modulus
+0024   //36
+0000 //div
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
+0000
