@@ -1,5 +1,5 @@
 # Microprocessor
-16 bit instruction Microprocessor that is Turing Complete. It is programmable with the LC3 instruction 
+This repo contains a program that simulates a Turing Complete microprocessor and so is programmable with an instruction set.  It is programmable with the LC3 instruction 
 set and serves up to 15 unique opcodes (instructions). The vmh file is an instruction set that the processor can receive.  
 
 
